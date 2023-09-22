@@ -1,0 +1,346 @@
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  section {
+    padding-top: 75px;
+  }
+
+  /* navbar */
+
+  .navbar {
+    font-size: large;
+    height: 75px;
+  }
+
+  .nav-item a {
+    padding: 15px;
+  }
+
+  .navigation-list {
+    font-size: large;
+  }
+
+  /* Hero-section */
+
+  .content-home {
+    width: auto;
+    margin: 0 0 0 25px;
+  }
+
+  /* About-section */
+
+  .about-me-container {
+    height: auto;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .about-me-content-section {
+    width: auto;
+    margin: 0 25px;
+    gap: 20px;
+  }
+
+  .profile-image-section {
+    margin: 40px;
+  }
+
+  .profile-image-section img {
+    height: 400px;
+    margin: 0;
+  }
+
+  .about-title {
+    font-size: x-large;
+  }
+
+  .about-description {
+    font-size: medium;
+  }
+
+  .qualification-title {
+    font-size: large;
+  }
+
+  .qualifications-list {
+    font-size: medium;
+    padding: 5px;
+  }
+
+  .q-item i {
+    font-size: x-small;
+    padding: 10px;
+  }
+
+  /* Portfolio-section */
+
+  .slider-box {
+    margin: 0;
+    height: auto;
+  }
+
+  /* Services-section */
+
+  .services-header {
+    padding: 20px;
+  }
+
+  .services-title {
+    font-size: x-large;
+  }
+
+  .services-description {
+    padding: 10px 50px;
+    font-size: medium;
+  }
+
+  .services-grid {
+    margin: auto;
+  }
+
+  /* Procedures-section */
+
+  .procedures-grid {
+    margin: auto;
+  }
+
+  .procedures-title {
+    font-size: x-large;
+  }
+
+  .procedures-description {
+    padding: 0;
+    font-size: medium;
+  }
+
+  /* Contact-section */ 
+  
+  .contact-container {
+    margin: 0 20px 30px 20px;
+  }
+
+  .contact-wrap {
+    gap: 20px;
+  }
+
+  .contact-title {
+    font-size: x-large;
+  }
+
+  .contact-description, .contact-address {
+    font-size: medium;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .call-appointment, .book-appointment {
+    padding: 15px;
+    font-size: large;
+  }
+
+  /* Footer-sectiion */
+
+  .footer-title {
+    font-size: large;
+  }
+
+  .links-title, .social-title {
+    font-size: medium;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding-top: 0;
+  }
+
+  /* navbar for Mobile */
+
+  .navigation-toggle {
+    visibility: visible;
+  }
+
+  .navigation-list {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    padding: 0 0 30px 30px;
+    gap: 15px;
+  }
+
+  .nav-item a {
+    padding: 0;
+  }
+
+  .navigation-list.open {
+    display: flex;
+  }
+
+  .nav-item a.active {
+    color: #484747;
+    background-color: transparent;
+    font-weight: normal;
+    padding: 0;
+  }
+
+  /* hero-section -----> home */
+
+  .content-home {
+    font-size: medium;
+    margin: 0 0 0 35px;
+    width: auto;
+  }
+
+  /* About-section */
+
+  .about-me-container {
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+  }
+
+  .profile-image-section img {
+    box-shadow: 10px 10px #00acee;
+    margin: 50px 0 0 0;
+  }
+
+  .about-me-content-section {
+    width: auto;
+    margin: 0;
+    gap: 20px;
+  }
+
+  .about-title {
+    font-size: x-large;
+  }
+
+  .about-description {
+    font-size: medium;
+  }
+
+  .qualification-title {
+    font-size: large;
+  }
+
+  .qualifications-list {
+    font-size: medium;
+    border-left: 2px solid #484747;
+    padding: 5px 10px;
+  }
+
+  /* Portfolio-section */
+
+  #portfolio {
+    padding-top: 30px;
+  }
+
+  .slider-box {
+    margin: 0;
+    height: auto;
+  }
+
+  .prev-button, .next-button {
+    padding: 0 10px;
+    font-size: large;
+  }
+
+  /* Service-section */
+
+  .services-header {
+    padding: 20px 0;
+  }
+
+  .services-title {
+    font-size: x-large;
+  }
+  .services-description {
+    padding: 10px;
+    font-size: small;
+  }
+
+  .services-grid {
+    margin: 0 30px;
+  }
+
+  .services-container {
+    margin: 0 0 25px 0;
+  }
+
+  /* Procedures-section */
+
+  .procedures-header {
+    padding: 25px;
+  }
+
+  .procedures-title {
+    font-size: x-large;
+}
+.procedures-description {
+    font-size: small;
+    padding: 0;
+}
+
+.procedures-grid {
+    margin: 0;
+}
+
+/* Contact-section */
+
+.contact-container {
+    margin: 10px;
+}
+
+.contact-wrap {
+    flex-direction: column;
+}
+
+.contact-map-box {
+    width: auto;
+}
+
+.contact-info-box {
+    width: auto;
+}
+
+.contact-content-box {
+    padding: 25px;
+    font-size: medium;
+}
+
+.contact-buttons {
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Footer-Section */
+
+footer {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.footer-description {
+    width: auto;
+}
+
+.line {
+    display: none;
+}
+
+.copyrights-res {
+    visibility: visible;
+    position: relative;
+}
+
+.copyrights {
+    visibility: hidden;
+    position: absolute;
+}
+}

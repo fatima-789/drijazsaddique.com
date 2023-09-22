@@ -1,0 +1,726 @@
+/* ------------------------------ Universal Styling ------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Assistant", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  padding-top: 75px;
+}
+
+/* ------------------------------ Styling for Navbar ------------------------------ */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color: transparent;
+  padding-right: 50px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Logo */
+
+.brand {
+  text-align: center;
+}
+
+.brand-name {
+  font-weight: bold;
+  font-size: large;
+  color: #fff;
+}
+
+.brand-title {
+  font-size: x-small;
+  color: white;
+}
+
+/* Nav-list for Laptop */
+
+.navigation-list {
+  display: flex;
+  visibility: visible;
+  font-size: large;
+}
+
+.nav-item a {
+  color: #fff;
+  height: 100%;
+  background-color: transparent;
+  padding: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.navigation-toggle {
+  display: flex;
+  visibility: hidden;
+}
+
+/* Nav-list for Mobile */
+
+.toggle-button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.menu-icon {
+  font-size: large;
+  color: #fff;
+}
+
+.navigation-list.open {
+  top: 65px;
+  padding-top: 20px;
+}
+
+.navigation-list.open a {
+  color: black;
+}
+
+.toggle-button:hover {
+  border: 1px solid #fff;
+}
+
+/* Nav-functionality with js */
+
+.nav-item a.active {
+  color: #fff;
+  background-color: #6DC3E8;
+  font-weight: bold;
+  padding: 25px;
+}
+
+/* ------------------------------ Styling for Hero Section ------------------------------ */
+
+#home {
+  padding-top: 0%;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.background-container {
+  display: flex;
+}
+
+.hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.image-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(250deg, #9cedfb3c, #65c6f7ec, #0051d4);
+  background-size: 150% 150%;
+  animation: gradient-animation 180s ease infinite;
+}
+
+.content-home {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: xx-large;
+}
+
+.surgeon-title {
+  white-space: pre;
+}
+
+.typewriter {
+  overflow: hidden;
+  animation: typing 3s steps(30, end), blink-caret 0.25s step-end infinite;
+}
+
+.surgeon-description {
+  font-size: medium;
+  padding: 20px 0;
+}
+
+.simple-animation {
+  animation: fade-in 2s ease-in-out alternate;
+}
+
+.btn-content {
+  border: none;
+  background-color: #15243A;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: medium;
+  color: #ffff;
+  cursor: pointer;
+}
+
+/* ------------------------------ Styling for About Section ------------------------------ */
+
+.about-me-container {
+  max-width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin: 0 30px;
+}
+
+.profile-image-section img {
+  margin: 0 0 0 50px;
+  width: 100%;
+  box-shadow: 20px 20px #6DC3E8;
+}
+
+.about-me-content-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 50px;
+}
+
+.about-title {
+  font-size: xx-large;
+}
+
+.about-description {
+  font-size: large;
+}
+
+.qualification-title {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.qualifications-list {
+  border-left: 2px solid #15243A;
+  padding: 15px;
+  font-size: large;
+}
+
+.q-item i {
+  font-size: small;
+  padding: 10px;
+}
+
+/* ------------------------------ Styling for Portfolio-section ------------------------------ */
+
+.slider-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+  height: 90vh;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0 40px;
+  cursor: pointer;
+  height: 100%;
+  font-size: xx-large;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+
+/* ------------------------------ Styling for Services-section ------------------------------ */
+
+.services-header {
+  padding: 50px;
+  text-align: center;
+}
+
+.services-title {
+  font-size: xx-large;
+}
+
+.services-description {
+  padding: 30px 100px 0 100px;
+  font-size: large;
+}
+
+.services-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 50px;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card img {
+  height: 200px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(30%);
+}
+
+.service-card .service-tag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: large;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.service-card:hover .service-tag {
+  display: none;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+
+/* ------------------------------ Styling for Services-section ------------------------------ */
+
+.procedures-container {
+  background-color: #15243A;
+  padding: 0 0 50px 0;
+}
+
+.procedures-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+.procedures-title {
+  font-size: xx-large;
+}
+
+.procedures-description {
+  padding: 30px 250px 0 250px;
+}
+
+.procedures-grid {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 200px;
+}
+
+.procedure-card {
+  height: 250px;
+  width: 250px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.procedure-icon {
+  font-size: xx-large;
+  padding: 20px 20px 0 20px;
+}
+
+.procedure-h3 {
+  font-weight: bold;
+  padding: 20px;
+  text-align: left;
+  font-size: large;
+  color: white;
+}
+
+.procedure-para {
+  padding: 0 20px 10px 20px;
+  display: none;
+}
+
+.procedure-readMoreButton, .procedure-readLessButton {
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 5px 20px 0 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.procedure-readLessButton {
+  display: none;
+}
+
+.card-1 {
+  background: #6DC3E8;
+}
+
+.card-2 {
+  background-color: #df7599;
+}
+
+.card-3 {
+  background-color: #305f72;
+}
+
+.card-4 {
+  background-color: #94a684;
+}
+
+.card-5 {
+  background-color: #9656a1;
+}
+
+.card-6 {
+  background-color: #32afa9;
+}
+
+.card-7 {
+  background-color: #a86464;
+}
+
+/* ------------------------------ Styling for Contact-section ------------------------------ */
+
+.contact-container {
+  margin: 50px 100px 0 100px;
+}
+
+.contact-wrap {
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+}
+
+.contact-map-box {
+  height: fit-content;
+  width: 50%;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+
+.contact-info-box {
+  display: block;
+  flex: 1;
+  width: 50%;
+}
+
+.contact-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  font-size: large;
+  padding: 0 30px;
+}
+
+.contact-title {
+  padding: 20px 0;
+  font-size: xx-large;
+}
+
+.contact-description {
+  font-size: large;
+}
+
+.contact-buttons {
+  display: flex;
+  margin: 30px;
+  gap: 25px;
+}
+
+.call-appointment {
+  border: none;
+  background-color: #15243A;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.call-appointment i {
+  font-size: large;
+  padding: 0 15px 0 0;
+}
+
+.book-appointment {
+  border: none;
+  background-color: #6DC3E8;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+}
+
+.book-appointment i {
+  font-size: large;
+  padding: 0 10px 0 0;
+}
+
+.contact-address {
+  font-size: large;
+}
+
+.contact-address i {
+  padding: 5px;
+  color: gray;
+}
+
+/* ------------------------------ Footer-section ------------------------------ */
+
+footer {
+  background-color: #15243A;
+  color: #efefef;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: medium;
+  padding: 70px 0 70px 0;
+}
+
+.footer-description {
+  width: 33%;
+  padding: 0;
+}
+
+.footer-title {
+  padding: 0 0 10px 0;
+  font-size: x-large;
+}
+
+.footer-para {
+  font-size: medium;
+}
+
+.line {
+  height: 1px;
+  background-color: #efefef;
+  width: 80px;
+  margin-top: 30px;
+}
+
+.copyrights {
+  font-size: medium;
+  padding: 30px 0 0 0;
+}
+
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding-top: 5px;
+}
+
+.links-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.footer-nav-item a {
+    font-size: medium;
+    color: #efefef;
+}
+
+.socials-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-title {
+  font-size: large;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  font-size: large;
+}
+
+.icon {
+  height: 35px;
+  width: 35px;
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+}
+
+.youtube {
+  background-color: #c4302b;
+}
+
+.twitter {
+  background-color: #00acee;
+}
+
+.gmail {
+  margin-top: 10px;
+}
+
+.gmail-button {
+  height: 35px;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #c4302b;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.gmail-title {
+    font-size: medium;
+}
+
+.gmail-description {
+  font-size: small;
+}
+
+.copyrights-res {
+    visibility: hidden;
+    position: absolute;
+  }
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------ Animations ------------------------------ */
+/* ------------------------------------------------------------------------ */
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: white;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
